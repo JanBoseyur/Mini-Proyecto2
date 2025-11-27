@@ -1,0 +1,41 @@
+MANUAL DE USUARIO - Proyecto INFO1148
+
+1.  Introducción Este programa permite procesar un archivo .java para:
+
+-   Detectar operadores aritméticos (+, -, *, /, %).
+-   Generar una gramática basada en las expresiones encontradas.
+-   Eliminar recursión por la izquierda.
+-   Calcular conjuntos FIRST.
+-   Generar tabla sintáctica.
+-   Guardar cada resultado en archivos separados.
+
+2.  Requisitos
+
+-   Python 3.10 o superior.
+-   Librerías estándar: json, sys, os, re.
+-   Estructura de carpetas: proyecto_info1148.py ejemplos/ ejemplo1.java
+    ejemplo2.java
+
+3.  Ejecución Para ejecutar el programa: python proyecto_info1148.py
+    ruta/al/archivo.java
+
+Ejemplo: python proyecto_info1148.py ejemplos/ejemplo1.java
+
+4.  Archivos generados por el programa
+
+-   grammar_original.txt
+-   grammar_no_left_recursion.txt
+-   first.json
+-   parsing_table.json
+
+5.  Solución a errores comunes • ERROR: “set is not JSON serializable” →
+    Ocurre si el programa intenta guardar conjuntos en JSON. → Solución:
+    convertir sets a listas antes de guardar.
+
+6.  Notas importantes • Si usas un archivo Java diferente, debe contener
+    expresiones aritméticas. • Si no detecta diferencias entre ejemplos,
+    revisa que tengan operadores diferentes.
+
+7.  Contacto Para dudas sobre el funcionamiento del manual o del
+    proyecto, consulte la documentación oficial de Teoría de la
+    Computación del curso.
